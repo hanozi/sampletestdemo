@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WebApplication8
 {
@@ -14,7 +15,7 @@ namespace WebApplication8
         SqlConnection cn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=FAC\SQLEXPRESS2008;Initial Catalog=MySampleDb;Integrated Security=True");
+                      cn = new SqlConnection(ConfigurationManager.ConnectionStrings["strconn"].ToString());
         }
 
         protected void Button1_Click(object sender, EventArgs e)
