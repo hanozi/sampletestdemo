@@ -35,7 +35,7 @@ namespace WebApplication8
               Label1.Text = "sorry shktiman..!!!";
           }
             cn.Close();
-            Label1.Text = "record inserted succfully";
+        
         }
     }
 }
